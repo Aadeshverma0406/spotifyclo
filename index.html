@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotifi - Your Favourite Music is Here</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li class="brand">
+        <a href="index.html">
+          <img src="spotify-logo  copy.png" alt="Logo" /> Spotifi
+        </a>
+      </li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Best Songs of 2025</h1>
+    <div class="songList">
+      <div class="songItem" data-index="0">
+        <img src="cover9.png" alt="Cover"/>
+        <span class="songName">Piya O Re Piya</span>
+        <div class="rightControls">
+          <span class="timestamp">03:34</span>
+          <i class="fa-solid fa-circle-play songItemPlay" data-index="0"></i>
+        </div>
+      </div>
+
+      <div class="songItem" data-index="1">
+        <img src="cover10.png" alt="Cover"/>
+        <span class="songName">Blinding Lights</span>
+        <div class="rightControls">
+          <span class="timestamp">03:20</span>
+          <i class="fa-solid fa-circle-play songItemPlay" data-index="1"></i>
+        </div>
+      </div>
+
+      <div class="songItem" data-index="2">
+        <img src="cover1.jpg" alt="Cover"/>
+        <span class="songName">Levitating</span>
+        <div class="rightControls">
+          <span class="timestamp">03:15</span>
+          <i class="fa-solid fa-circle-play songItemPlay" data-index="2"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Controls -->
+  <div class="bottom">
+    <input type="range" id="myProgressBar" min="0" max="100" value="0"/>
+
+    <div class="controls">
+      <i class="fa-solid fa-backward" id="prev"></i>
+      <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+      <i class="fa-solid fa-forward" id="next"></i>
+    </div>
+
+    <div class="songinfo">
+      <img src="gif.jpg" id="gif" alt="playing"/>
+      <span id="currentSongName">Piya O Re Piya</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

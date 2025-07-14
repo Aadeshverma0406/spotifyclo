@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Varela+Round&display=swap');
+
+:root {
+    --primary-color: #1db954;
+    --dark-bg: #121212;
+    --light-bg: #282828;
+    --accent: #1ed760;
+    --text-color: #fff;
+    --muted-text: #b3b3b3;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: 'Varela Round', sans-serif;
+    background-color: black;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 60px;
+    padding: 0 24px;
+    color: var(--accent);
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li:hover {
+    color: #ffffff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: auto;
+}
+
+.brand img {
+    width: 48px;
+    margin-right: 12px;
+}
+
+.container {
+    min-height: 70vh;
+    background: linear-gradient(to right, #000, #1c1c1c);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 14px;
+    padding: 30px;
+    background-image: url('img.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.songList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-bg);
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.songItem:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
+
+.songItem img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.songName {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.songlistplay {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.timestamp {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.songItemPlay {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.songItemPlay:hover {
+    color: var(--text-color);
+}
+
+/* Bottom Control Bar */
+.bottom {
+    position: sticky;
+    bottom: 0;
+    background-color: #1c1c1c;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid var(--primary-color);
+    padding: 15px 0;
+}
+
+#myProgressBar {
+    width: 75vw;
+    cursor: pointer;
+    margin-top: 10px;
+    accent-color: var(--primary-color);
+}
+
+.controls {
+    margin-top: 14px;
+}
+
+.controls i {
+    cursor: pointer;
+    font-size: 28px;
+    margin: 0 18px;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.controls i:hover {
+    color: var(--accent);
+}
+
+.songinfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+#gif {
+    height: 45px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .songItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .controls i {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+
+    #myProgressBar {
+        width: 90vw;
+    }
+
+    .songinfo {
+        font-size: 0.9rem;
+    }
+}
